@@ -1,28 +1,4 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Gist
- @abrito6
- Watch 1
-  Star 0
-  Fork 33 Perlamasielmvp/shopping_list_itla
-forked from raydelto/shopping_list_itla
- Code  Pull requests 0  Wiki  Pulse  Graphs
-Branch: master Find file Copy pathshopping_list_itla/src/Menu.cpp
-59d7dac  2 hours ago
-@Perlamasielmvp Perlamasielmvp updating solution
-1 contributor
-RawBlameHistory     146 lines (128 sloc)  2.62 KB
-/*
- * Menu.cpp
- *
- *  Created on: May 22, 2016
- *      Author: raydelto
- */
 
- // update by perla
 #include "Menu.h"
 #include <iostream>
 using namespace std;
