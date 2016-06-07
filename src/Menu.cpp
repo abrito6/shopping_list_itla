@@ -1,3 +1,20 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Gist
+ @abrito6
+ Watch 1
+  Star 0
+  Fork 33 Perlamasielmvp/shopping_list_itla
+forked from raydelto/shopping_list_itla
+ Code  Pull requests 0  Wiki  Pulse  Graphs
+Branch: master Find file Copy pathshopping_list_itla/src/Menu.cpp
+59d7dac  2 hours ago
+@Perlamasielmvp Perlamasielmvp updating solution
+1 contributor
+RawBlameHistory     146 lines (128 sloc)  2.62 KB
 /*
  * Menu.cpp
  *
@@ -5,6 +22,7 @@
  *      Author: raydelto
  */
 
+ // update by perla
 #include "Menu.h"
 #include <iostream>
 using namespace std;
@@ -66,21 +84,61 @@ void Menu::routeAction(int option)
 }
 
 void Menu::listItems()
-{
-	//TODO: Implement this
+{system("cls");
+    Element* i = list -> getFirstElement();
+
+    while (i != NULL){
+        cout << i -> getCode() << ".- " << i -> getName() << " " << i -> getQuantity() <<endl;
+        i = i -> getNext();
+    }
+    Element *list2 = list -> getFirstElement();
+    while (i != NULL){
+        cout << lista2 -> getCodigo() << ".- " << list2 -> getName() << " " << lista2 -> getQuantity() <<endl;
+        list2 = list2 -> getNext();
+    }
+    system("pause");
+
 	cout << "Implement  Menu::listItems" << endl;
 }
 
 void Menu::addItems()
+                    
 {
-	//TODO: Implement this
+	system("cls");
+    string name;
+    int Quantity;
+    cout<<"INTRODUCING ARTICLES" <<endl;
+    cout<<"\n Enter the name of the article: ";
+    cin >> name;
+    cout<<"Enter the amount of new contact: ";
+    cin >> Quantity;
+    Element* article = new Element(code, name, Quantity);
+    list -> add(article);
+    code++;
+    system("pause");
+}
+
 	cout << "Implement  Menu::addItems" << endl;
 }
 
 void Menu::removeItems()
 {
-	//TODO: Implement this
+	
 	cout << "Implement  Menu::removeItems" << endl;
+	  system("cls");
+    int _code, Code;
+    cout<<"remove article\n ";
+    cout<<"Enter the code the article: ";
+    cin >> _code;
+    Element* i = list -> getFirstElement();
+    while (i != NULL){
+        if (_code == i -> getCode()) {
+            Element* article = new Element(i -> getCode(), i -> getName(), i -> getQuantity());
+            list -> remover(article);
+        }
+        i = i -> getNext();
+    }
+    system("pause");
 }
 
 void Menu::show()
@@ -102,3 +160,5 @@ void Menu::show()
 		}
 	}while(option !=4);
 }
+Status API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Contact Help
